@@ -52,7 +52,7 @@ for row in matrix:
     print(row)
 print(f"Транспонированная матрица: ")
 for row in transposed:
-    print(row)"""
+    print(row)
 
 #Задание 4
 students = [
@@ -74,4 +74,21 @@ print(f"Средний возраст: {avg_age:.1f} лет")
 sorted_students = sorted(students, key=lambda s: s[2], reverse=True)
 print("По баллу:")
 for name, age, grade in sorted_students:
-    print(f"{name}: {grade}")
+    print(f"{name}: {grade}")"""
+
+#Задание 5
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+#Через множества
+set1 = set(list1)
+set2 = set(list2)
+union = set1 | set2
+intersection = set1 & set2
+difference = set1 - set2
+#вывод
+print(f"Объединение: {sorted(union)}")
+print(f"Пересечение: {sorted(intersection)}")
+print(f"Разность: {sorted(difference)}")
+#c сохранением порядка (через list comprehension)
+union_ordered = list1 + [x for x in list2 if x not in list1]
+intersection_ordered = [x for x in list1 if x in list2]
