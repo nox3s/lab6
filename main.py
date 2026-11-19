@@ -16,7 +16,7 @@ numbers.sort()
 print(f"Отсортированный список: {numbers}")
 #Удаление дубликатов в списке (с сохранением порядка)
 unique = list(dict.fromkeys(numbers))
-print(f"Без дубликатов: {unique}")"""
+print(f"Без дубликатов: {unique}")
 
 #Задание 2
 #создание списка
@@ -36,4 +36,20 @@ for num in numbers:
         dublicates2.add(num)
     seen.add(num)
 #вывод дубликатов
-print(f"Дубликаты через множества: {list(dublicates2)}")
+print(f"Дубликаты через множества: {list(dublicates2)}")"""
+
+#Задание 3
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+#через zip
+transposed = [list(row) for row in zip(*matrix)]
+#вывод
+print(f"Исходная матрица: ")
+for row in matrix:
+    print(row)
+print(f"Транспонированная матрица: ")
+for row in transposed:
+    print(row)
