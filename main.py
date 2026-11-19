@@ -74,7 +74,7 @@ print(f"Средний возраст: {avg_age:.1f} лет")
 sorted_students = sorted(students, key=lambda s: s[2], reverse=True)
 print("По баллу:")
 for name, age, grade in sorted_students:
-    print(f"{name}: {grade}")"""
+    print(f"{name}: {grade}")
 
 #Задание 5
 list1 = [1, 2, 3, 4, 5]
@@ -91,4 +91,27 @@ print(f"Пересечение: {sorted(intersection)}")
 print(f"Разность: {sorted(difference)}")
 #c сохранением порядка (через list comprehension)
 union_ordered = list1 + [x for x in list2 if x not in list1]
-intersection_ordered = [x for x in list1 if x in list2]
+intersection_ordered = [x for x in list1 if x in list2]"""
+
+#Задание 6
+while True:
+    try:
+        target = int(input("Введите искомую сумму: "))
+        break
+    except ValueError:
+        print("Ошибка: сумма должна быть целым числом.")
+        
+# Поиск пар 
+pairs = []
+for num in range(0, target + 1): # от 0 до target
+    complement = target - num
+    if num <= complement: # защита от дублей (a,b) и (b,a)
+        pairs.append((num, complement))
+
+# Вывод результата
+print(f"Искомая сумма: {target}")
+if pairs:
+    print(f"Найденные пары: {pairs}")
+    print(f"Количество найденных пар: {len(pairs)}")
+else:
+    print("Пар с такой суммой не найдено.")
