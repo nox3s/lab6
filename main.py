@@ -36,7 +36,7 @@ for num in numbers:
         dublicates2.add(num)
     seen.add(num)
 #вывод дубликатов
-print(f"Дубликаты через множества: {list(dublicates2)}")"""
+print(f"Дубликаты через множества: {list(dublicates2)}")
 
 #Задание 3
 matrix = [
@@ -52,4 +52,26 @@ for row in matrix:
     print(row)
 print(f"Транспонированная матрица: ")
 for row in transposed:
-    print(row)
+    print(row)"""
+
+#Задание 4
+students = [
+    ("Иван", 25, 4.5),
+    ("Мария", 22, 4.8),
+    ("Петр", 30, 4.2),
+    ("Анна", 20, 4.9),
+]
+# самый старший
+oldest = max(students, key=lambda s: s[1])
+print(f"Самый старший: {oldest[0]}, {oldest[1]} лет")
+# с самым высоким баллом
+best = max(students, key=lambda s: s[2])
+print(f"Лучший студент: {best[0]}, {best[2]}")
+# средний возраст
+avg_age = sum(s[1] for s in students) / len(students)
+print(f"Средний возраст: {avg_age:.1f} лет")
+# сортировка по баллу (убывание)
+sorted_students = sorted(students, key=lambda s: s[2], reverse=True)
+print("По баллу:")
+for name, age, grade in sorted_students:
+    print(f"{name}: {grade}")
